@@ -50,6 +50,15 @@ html[data-theme="dark"] .gh-head-logo img:nth-child(2) {
     opacity: 1;
 }
 
+/* Search + toggle wrapper (keeps space-between layout correct)
+/* ---------------------------------------------------------- */
+
+.gh-head-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 /* Toggle component
 /* ---------------------------------------------------------- */
 

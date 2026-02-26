@@ -130,7 +130,8 @@ const css = parallel(journalCss, edgeCss);
 const js = parallel(journalJs, edgeJs);
 
 function zipper(done) {
-    const filename = require('./package.json').name + '.zip';
+    const pkg = require('./package.json');
+    const filename = pkg.name + '-' + pkg.version + '.zip';
 
     pump([
         src([
