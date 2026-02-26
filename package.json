@@ -40,6 +40,14 @@
             }
         },
         "card_assets": true,
+        "custom_template": {
+            "post": {
+                "custom-edge-post": "Portfolio Post"
+            },
+            "page": {
+                "custom-edge-page": "Portfolio Page"
+            }
+        },
         "custom": {
             "navigation_layout": {
                 "type": "select",

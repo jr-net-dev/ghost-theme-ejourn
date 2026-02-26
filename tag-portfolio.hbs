@@ -1,0 +1,12 @@
+{{!< default-edge}}
+
+<main class="site-main">
+
+    <div class="post-feed gh-feed">
+        <div class="grid-item grid-sizer"></div>
+        {{#foreach posts}}
+            {{> "edge-loop"}}
+        {{/foreach}}
+    </div>
+
+</main>

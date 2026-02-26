@@ -98,6 +98,11 @@ html[data-theme="dark"] .gh-head-logo img:nth-child(2) {
 
 /* Responsive — match search button visibility pattern */
 @media (max-width: 767px) {
+    /* Expand the mobile brand grid to fit the toggle as a 4th child */
+    #gh-head .gh-head-brand {
+        grid-template-columns: 1fr auto auto auto;
+    }
+
     .gh-head-actions .gh-darkmode-toggle {
         display: none;
     }
