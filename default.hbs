@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}</title>
     <link rel="stylesheet" href="{{asset "built/journal-screen.css"}}">
+    <script>(function(){var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)})()</script>
 
     {{ghost_head}}
 </head>
@@ -26,6 +27,7 @@
                     </a>
                 </div>
                 <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
+                {{> "darkmode-toggle"}}
                 <button class="gh-burger" aria-label="Toggle menu"></button>
             </div>
 
@@ -58,6 +60,7 @@
                         {{/unless}}
                     </div>
                 {{/unless}}
+                {{> "darkmode-toggle"}}
             </div>
         </div>
     </header>

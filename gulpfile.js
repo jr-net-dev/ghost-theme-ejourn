@@ -76,6 +76,10 @@ function getJournalJsFiles(version) {
         jsFiles.push(src('assets/js/journal/lib/*.js'));
     }
 
+    if (fs.existsSync('assets/js/shared')) {
+        jsFiles.push(src('assets/js/shared/*.js'));
+    }
+
     jsFiles.push(src('assets/js/journal/main.js'));
 
     return jsFiles;
@@ -100,6 +104,10 @@ function getEdgeJsFiles(version) {
 
     if (fs.existsSync('assets/js/edge/lib')) {
         jsFiles.push(src('assets/js/edge/lib/*.js'));
+    }
+
+    if (fs.existsSync('assets/js/shared')) {
+        jsFiles.push(src('assets/js/shared/*.js'));
     }
 
     jsFiles.push(src('assets/js/edge/main.js'));
@@ -143,7 +151,9 @@ const journalEntryWatcher = () => watch('assets/css/journal-screen.css', journal
 const edgeEntryWatcher = () => watch('assets/css/edge-screen.css', edgeCss);
 const journalJsWatcher = () => watch('assets/js/journal/**/*.js', journalJs);
 const edgeJsWatcher = () => watch('assets/js/edge/**/*.js', edgeJs);
-const watcher = parallel(hbsWatcher, journalCssWatcher, edgeCssWatcher, journalEntryWatcher, edgeEntryWatcher, journalJsWatcher, edgeJsWatcher);
+const sharedCssWatcher = () => watch('assets/css/shared/**/*.css', parallel(journalCss, edgeCss));
+const sharedJsWatcher = () => watch('assets/js/shared/**/*.js', parallel(journalJs, edgeJs));
+const watcher = parallel(hbsWatcher, journalCssWatcher, edgeCssWatcher, journalEntryWatcher, edgeEntryWatcher, journalJsWatcher, edgeJsWatcher, sharedCssWatcher, sharedJsWatcher);
 const build = series(css, js);
 
 exports.build = build;

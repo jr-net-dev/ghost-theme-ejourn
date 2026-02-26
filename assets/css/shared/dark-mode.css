@@ -1,0 +1,110 @@
+/* Dark mode — variable overrides
+/* ---------------------------------------------------------- */
+
+html[data-theme="dark"] {
+    --color-white: #161b22;
+    --color-lighter-gray: #1c2128;
+    --color-light-gray: #30363d;
+    --color-mid-gray: #484f58;
+    --color-dark-gray: #8b949e;
+    --color-darker-gray: #e6edf3;
+    --color-primary-text: #c9d1d9;
+    --color-secondary-text: #8b949e;
+    --color-black: #f0f6fc;
+    --background-color: #1c2128;
+}
+
+/* Hardcoded color overrides
+/* ---------------------------------------------------------- */
+
+/* Dropdown menu */
+html[data-theme="dark"] .gh-dropdown {
+    background-color: #1c2128;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 7px 20px -5px rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme="dark"] .gh-dropdown li a {
+    color: #e6edf3 !important;
+}
+
+/* Table scroll indicators */
+html[data-theme="dark"] .gh-content table:not(.gist table) {
+    background: none;
+}
+
+html[data-theme="dark"] .gh-content table:not(.gist table) td:first-child,
+html[data-theme="dark"] .gh-content table:not(.gist table) td:last-child {
+    background-image: none;
+}
+
+html[data-theme="dark"] .gh-content table:not(.gist table) th {
+    background-color: #1c2128;
+}
+
+/* Dark mode logo swap (Ghost supports 2nd logo image) */
+html[data-theme="dark"] .gh-head-logo img:nth-child(1) {
+    opacity: 0;
+}
+
+html[data-theme="dark"] .gh-head-logo img:nth-child(2) {
+    opacity: 1;
+}
+
+/* Toggle component
+/* ---------------------------------------------------------- */
+
+.gh-darkmode-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: -6px;
+    margin-left: -6px;
+}
+
+.gh-darkmode-input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.gh-darkmode-track {
+    position: relative;
+    width: 36px;
+    height: 20px;
+    background-color: var(--color-mid-gray);
+    border-radius: 10px;
+    transition: background-color 0.2s;
+}
+
+.gh-darkmode-input:checked + .gh-darkmode-track {
+    background-color: var(--ghost-accent-color);
+}
+
+.gh-darkmode-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.gh-darkmode-input:checked + .gh-darkmode-track .gh-darkmode-thumb {
+    transform: translateX(16px);
+}
+
+/* Responsive — match search button visibility pattern */
+@media (max-width: 767px) {
+    .gh-head-actions .gh-darkmode-toggle {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .gh-head-brand .gh-darkmode-toggle {
+        display: none;
+    }
+}
