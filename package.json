@@ -1,7 +1,7 @@
 {
     "name": "ejourn",
     "description": "A merged Ghost theme combining Journal (blog) and Edge (portfolio)",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "private": true,
     "engines": {
         "ghost": ">=5.0.0"

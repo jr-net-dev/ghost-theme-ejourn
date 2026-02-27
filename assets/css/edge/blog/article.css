@@ -11,6 +11,14 @@
     font-size: 1.8rem;
 }
 
+.gh-article-image img,
+.gh-content img {
+    max-height: 80vh;
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .gh-content {
     margin-top: 28px;
 }
