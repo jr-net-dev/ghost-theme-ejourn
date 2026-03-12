@@ -4,6 +4,7 @@
 @import "edge/general/masonry.css";
 @import "edge/site/layout.css";
 @import "edge/site/header.css";
+@import "edge/site/portfolio-filter.css";
 @import "edge/blog/feed.css";
 @import "edge/blog/post.css";
 @import "edge/blog/article.css";
