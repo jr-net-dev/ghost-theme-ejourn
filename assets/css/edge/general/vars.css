@@ -1,8 +1,14 @@
 :root {
-    --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    --font-sans: Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
     --font-serif: Satoshi, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
     --color-primary-text: #15171a;
     --content-width: 640px;
     --content-font-size: 1.6rem;
     --grid-gap: 16px;
+}
+
+/* Override Ghost admin font settings for portfolio pages */
+.site {
+    --gh-font-heading: Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    --gh-font-body: Satoshi, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
 }
