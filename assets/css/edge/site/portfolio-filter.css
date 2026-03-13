@@ -1,6 +1,7 @@
 .gh-portfolio-filter {
     display: flex;
     justify-content: center;
+    margin-top: -36px;
     gap: 8px;
     padding: 12px 20px;
     flex-wrap: wrap;

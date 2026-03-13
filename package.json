@@ -1,16 +1,16 @@
 {
     "name": "ejourn",
-    "description": "A merged Ghost theme combining Journal (blog) and Edge (portfolio)",
-    "version": "1.2.0",
+    "description": "A merged and significantly updated Ghost theme combining Journal (blog) and Edge (portfolio)",
+    "version": "1.2.1",
     "private": true,
     "engines": {
         "ghost": ">=5.0.0"
     },
     "license": "MIT",
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Jeffrey Robert Frese based on work by the Ghost Foundation",
+        "email": "dev@jeffreyrobert.net",
+        "url": "https://jeffreyrobert.net"
     },
     "keywords": [
         "ghost",
