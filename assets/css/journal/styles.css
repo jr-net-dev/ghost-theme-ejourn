@@ -1,9 +1,25 @@
 :root {
-    --font-sans: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
-    --font-serif: Lora, Times, serif; /* stylelint-disable-line value-keyword-case */
+    --font-sans: Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    --font-serif: Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
     --color-primary-text: var(--color-black);
     --color-darker-gray: var(--color-black);
     --head-nav-gap: 3.2rem;
+}
+
+/* Override Ghost admin font settings for blog pages */
+.gh-site {
+    --gh-font-heading: JetBrains Mono, monospace;
+    --gh-font-body: Space Mono, monospace;
+}
+
+/* Logo and nav use Plus Jakarta Sans, not the blog heading/body fonts */
+.gh-head-logo {
+    font-family: Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+.gh-head-menu,
+.gh-head-actions {
+    font-family: Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
 }
 
 .tag-template .gh-main,
