@@ -322,6 +322,7 @@
     font-size: 1.4rem;
     line-height: 1.4;
     color: var(--color-secondary-text);
+    line-clamp: 2;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
