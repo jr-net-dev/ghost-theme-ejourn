@@ -65,3 +65,32 @@
         max-width: 1650px;
     }
 }
+
+/* Grid gap — custom setting from Ghost Admin */
+body.grid-Compact .post-feed {
+    --grid-gap: 4px;
+}
+
+body.grid-Spacious .post-feed {
+    --grid-gap: 32px;
+}
+
+@media (max-width: 640px) {
+    body.grid-Compact .post-feed {
+        --grid-gap: 1px;
+    }
+
+    body.grid-Spacious .post-feed {
+        --grid-gap: 8px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1019px) {
+    body.grid-Compact .post-feed {
+        --grid-gap: 2px;
+    }
+
+    body.grid-Spacious .post-feed {
+        --grid-gap: 16px;
+    }
+}
