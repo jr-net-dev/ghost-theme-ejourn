@@ -7,7 +7,7 @@
 }
 
 /* Override Ghost admin font settings for blog pages */
-.gh-site {
+body.layout-journal {
     --gh-font-heading: JetBrains Mono, monospace;
     --gh-font-body: Space Mono, monospace;
 }
