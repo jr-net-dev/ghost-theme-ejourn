@@ -8,8 +8,8 @@
 
 /* Override Ghost admin font settings for blog pages */
 body.layout-journal {
-    --gh-font-heading: JetBrains Mono, monospace;
-    --gh-font-body: Space Mono, monospace;
+    --gh-font-heading: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+    --gh-font-body: Noto Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
 }
 
 /* Logo and nav use Plus Jakarta Sans, not the blog heading/body fonts */

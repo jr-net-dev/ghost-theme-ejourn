@@ -27,74 +27,88 @@
     src: url("../fonts/PlusJakartaSans-Bold.woff2") format("woff2"), url("../fonts/PlusJakartaSans-Bold.woff") format("woff");
 }
 
-/* JetBrains Mono — blog headings */
+/* Inter — blog headings (18pt optical size) */
 @font-face {
-    font-family: JetBrains Mono;
+    font-family: Inter;
     font-style: normal;
     font-weight: 400;
-    src: url("../fonts/JetBrainsMono-Regular.woff2") format("woff2");
+    src: url("../fonts/Inter-Regular.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: JetBrains Mono;
+    font-family: Inter;
     font-style: normal;
     font-weight: 500;
-    src: url("../fonts/JetBrainsMono-Medium.woff2") format("woff2");
+    src: url("../fonts/Inter-Medium.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: JetBrains Mono;
+    font-family: Inter;
     font-style: normal;
     font-weight: 600;
-    src: url("../fonts/JetBrainsMono-SemiBold.woff2") format("woff2");
+    src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: JetBrains Mono;
+    font-family: Inter;
     font-style: normal;
     font-weight: 700;
-    src: url("../fonts/JetBrainsMono-Bold.woff2") format("woff2");
+    src: url("../fonts/Inter-Bold.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: JetBrains Mono;
+    font-family: Inter;
     font-style: italic;
     font-weight: 400;
-    src: url("../fonts/JetBrainsMono-Italic.woff2") format("woff2");
+    src: url("../fonts/Inter-Italic.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: JetBrains Mono;
+    font-family: Inter;
     font-style: italic;
     font-weight: 700;
-    src: url("../fonts/JetBrainsMono-BoldItalic.woff2") format("woff2");
+    src: url("../fonts/Inter-BoldItalic.woff2") format("woff2");
 }
 
-/* Space Mono — blog body text (Google Fonts v17, converted to woff2) */
+/* Noto Sans — blog body text */
 @font-face {
-    font-family: Space Mono;
+    font-family: Noto Sans;
     font-style: normal;
     font-weight: 400;
-    src: url("../fonts/SpaceMono-Regular-google.woff2") format("woff2");
+    src: url("../fonts/NotoSans-Regular.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: Space Mono;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/NotoSans-Medium.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/NotoSans-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: Noto Sans;
     font-style: normal;
     font-weight: 700;
-    src: url("../fonts/SpaceMono-Bold-google.woff2") format("woff2");
+    src: url("../fonts/NotoSans-Bold.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: Space Mono;
+    font-family: Noto Sans;
     font-style: italic;
     font-weight: 400;
-    src: url("../fonts/SpaceMono-Italic-google.woff2") format("woff2");
+    src: url("../fonts/NotoSans-Italic.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: Space Mono;
+    font-family: Noto Sans;
     font-style: italic;
     font-weight: 700;
-    src: url("../fonts/SpaceMono-BoldItalic-google.woff2") format("woff2");
+    src: url("../fonts/NotoSans-BoldItalic.woff2") format("woff2");
 }
