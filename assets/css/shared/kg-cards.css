@@ -1,0 +1,105 @@
+/* Foolproof defaults for Koenig editor card types.
+   The shared theme assets deliberately leave most card layout to themes,
+   so these rules fill the gaps to ensure no card type ever distorts media. */
+
+/* === Gallery card ===
+   Ghost emits .kg-gallery-image with inline `flex: <aspect-ratio> 1 0%`.
+   With .kg-gallery-row as a flex container, images self-arrange so each
+   row has equal heights and widths proportional to aspect ratios.
+   align-items:flex-start prevents flex from stretching items vertically. */
+
+.kg-gallery-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.kg-gallery-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.kg-gallery-image {
+    /* Fallback if Ghost ever stops emitting inline flex values.
+       Inline `flex: <aspect-ratio> 1 0%` wins when present. */
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.kg-gallery-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    margin: 0;
+}
+
+.kg-gallery-row:not(:first-of-type) {
+    margin: 0.75em 0 0;
+}
+
+.kg-gallery-image:not(:first-of-type) {
+    margin: 0 0 0 0.75em;
+}
+
+/* Narrow viewports: stack rows into a column so each image gets full
+   width at its natural aspect ratio instead of becoming a tiny sliver. */
+@media (max-width: 600px) {
+    .kg-gallery-row {
+        flex-direction: column;
+    }
+
+    .kg-gallery-image:not(:first-of-type) {
+        margin: 0.75em 0 0;
+    }
+}
+
+/* === Single image card ===
+   .kg-width-full already gets `width: 100%` from shared assets.
+   Wide and regular widths rely on intrinsic dimensions. We just make
+   sure nothing overrides the natural aspect ratio. */
+
+.kg-image {
+    height: auto;
+}
+
+.kg-width-wide img {
+    width: 100%;
+    height: auto;
+}
+
+/* === Embed card (YouTube, Vimeo, Loom, etc.) ===
+   The iframe gets `width: 100%` from shared assets but no height handling,
+   leaving it as the inline `height` attribute (often ~113px). Force a
+   16:9 aspect ratio — the right call for ~all video embeds. Non-video
+   embeds (Twitter, gists) typically render via JS without iframes. */
+
+.kg-embed-card iframe {
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
+
+/* === Video card === */
+
+.kg-video-card video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* === Audio card === */
+
+.kg-audio-card audio {
+    width: 100%;
+}
+
+/* === Bookmark thumbnail ===
+   The thumbnail container has fixed dimensions; the img needs to fill it
+   without distortion. object-fit:cover crops cleanly to fit. */
+
+.kg-bookmark-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
