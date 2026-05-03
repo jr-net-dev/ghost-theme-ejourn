@@ -11,8 +11,11 @@
     font-size: 1.8rem;
 }
 
+/* Clamp tall images so they don't dominate the viewport.
+   Targets only the feature image and single image cards — gallery,
+   bookmark, and other card types manage their own layout. */
 .gh-article-image img,
-.gh-content img {
+.gh-content .kg-image {
     max-height: 90vh;
     width: auto;
     margin-right: auto;
