@@ -1,0 +1,36 @@
+/* Koenig gallery card layout — preserves image aspect ratios.
+   Ghost emits .kg-gallery-image with inline `flex: <aspect-ratio> 1 0%`,
+   so we need .kg-gallery-row to be a flex container for that to work. */
+
+.kg-gallery-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.kg-gallery-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.kg-gallery-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+}
+
+.kg-gallery-row:not(:first-of-type) {
+    margin: 0.75em 0 0;
+}
+
+.kg-gallery-image:not(:first-of-type) {
+    margin: 0 0 0 0.75em;
+}
+
+/* Single image cards: aspect ratio is set by the inline width/height attrs
+   on the <img>, so we just need to make sure CSS doesn't override it. */
+.kg-image {
+    height: auto;
+}
